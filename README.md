@@ -1,1 +1,1 @@
-# startup
+This is the readMe file for my cs260 project. 
