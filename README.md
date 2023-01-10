@@ -12,3 +12,7 @@ Popular opinion is a site where users can post their thoughts and ideas and reci
 - Displays total downvotes
 - User can sort posts by most popular, newest, or most controversial
 - Posts and votes are permanently stored
+
+## Rough Sketches 
+
+
