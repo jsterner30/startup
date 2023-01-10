@@ -17,6 +17,6 @@ Popular opinion is a site where users can post their thoughts and ideas and reci
 
 This is a wire frame for the home page of the Popular Opinion site
 
-![](/startup/images/Sketch.png)
+![](/images/Sketch.png)
 
 
