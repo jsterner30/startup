@@ -226,25 +226,6 @@ We finish off the grid configuration by saying that we want all rows to be exact
 ### Flex
 The flex display layout is useful when you want to partition your application into areas that responsively move around as the window resizes or the orientation changes. In order to demonstrate the power of flex we will build an application that has a header, footer, and a main content area that is split into two sections, with controls of the left and content on the right.
 
-Ex html: 
-
-`<body>
-  <header>
-    <h1>CSS flex &amp; media query</h1>
-  </header>
-  <main>
-    <section>
-      <h2>Controls</h2>
-    </section>
-    <section>
-      <h2>Content</h2>
-    </section>
-  </main>
-  <footer>
-    <h2>Footer</h2>
-  </footer>
-</body>`
-
 Now we can use Flexbox to make it all come alive. We make the body element into a responsive flexbox by including the CSS display property with the value of flex. This tells the browser that all of the children of this element are to be displayed in a flex flow. We want our top level flexbox children to be column oriented and so we add the flex-direction property with a value of column. We then add some simple other declarations to zero out the margin and fill the entire viewport with our application frame.
 
 statrting CSS: 
