@@ -228,7 +228,7 @@ The flex display layout is useful when you want to partition your application in
 
 Ex html: 
 
-<body>
+`<body>
   <header>
     <h1>CSS flex &amp; media query</h1>
   </header>
@@ -243,7 +243,7 @@ Ex html:
   <footer>
     <h2>Footer</h2>
   </footer>
-</body>
+</body>`
 
 Now we can use Flexbox to make it all come alive. We make the body element into a responsive flexbox by including the CSS display property with the value of flex. This tells the browser that all of the children of this element are to be displayed in a flex flow. We want our top level flexbox children to be column oriented and so we add the flex-direction property with a value of column. We then add some simple other declarations to zero out the margin and fill the entire viewport with our application frame.
 
