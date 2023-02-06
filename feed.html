@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Popular Opinion</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <style type="text/css">
+    <style>
         body {
             padding-top: 50px;
-        }
-        .starter-template {
-            padding: 40px 15px;
-            text-align: center;
         }
     </style>
 </head>
@@ -25,7 +22,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Popular Opinion</a>
+            <a class="navbar-brand" href="index.html" style="color: rgb(45, 210, 175);">Popular Opinion</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -38,8 +35,21 @@
     </div>
 </nav>
 
+<div class="post">
+    <h3>Title</h3>
+    <h5>Description</h5>
+    <div class="post-info">
+        <span class="author">Author</span>
+        <span class="votes">
+            <span class="upvotes">543</span>
+            <button class="upvote-btn"></button>
+            <span class="downvotes">345</span>
+            <button> class="downvote-btn"></button>
+        </span>
+    </div>
+</div>
 
-<footer class="sticky-bottom">
+<footer class="sticky-bottom" style="background-color:#222222">
         <div class="container-fluid ">
             <p class="text-muted">&copy; 2023 - Popular Opinion</p>
         </div>
