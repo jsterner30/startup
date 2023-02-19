@@ -3,16 +3,18 @@ import livereload from "rollup-plugin-livereload";
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
+import json from '@rollup/plugin-json';
 
 export default {
-    input: "main.js",
+    input: "./main.js",
     output: {
-        file: "build/bundle.js",
+        file: "./build/bundle.js",
         format: "iife",
         sourcemap: true,
         name: 'bundle'
     },
     plugins: [
+        json(),
         nodeResolve({
             extensions: [".js"],
         }),
