@@ -1,0 +1,32 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "startup project for cs260",
+  "main": "create.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "rollup --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsterner30/startup.git"
+  },
+  "author": "Jaden Sterner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsterner30/startup/issues"
+  },
+  "homepage": "https://github.com/jsterner30/startup#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-replace": "^5.0.2",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.2"
+  },
+  "type": "module"
+}
