@@ -5,9 +5,12 @@ export default function () {
     const passwordEl = document.querySelector("#loginPassword")
     const warnEl = document.querySelector("#loginWarning")
     localStorage.setItem("userName", usernameEl.value)
-    const users = JSON.parse(localStorage.getItem("users"))
-    if (!users) localStorage.setItem("users", "{}")
-    console.log(users)
+    let users = localStorage.getItem("users")
+    if (!users) {
+        localStorage.setItem("users", "{}")
+        users = "{}"
+    }
+    users = JSON.parse(users)
 
     if (usernameEl.value === "" || passwordEl.value === "") {
         warnEl.textContent = "Please fill in all fields"
@@ -18,7 +21,6 @@ export default function () {
             const regBtn = document.createElement("button")
             regBtn.textContent = "Sign Up Instead"
             regBtn.id = "loginRegisterButton"
-            regBtn.style.backgroundColor = "rgb(210, 45, 80)"
             regBtn.style.paddingInline = "10%"
             regBtn.classList.add("btn-primary")
             regBtn.classList.add("btn-large")
@@ -29,6 +31,7 @@ export default function () {
         }
         warnEl.textContent = "Username not found"
     } else if (users[usernameEl.value].password === passwordEl.value) {
+        load()
         window.location.href = "feed.html"
     }
     else {
