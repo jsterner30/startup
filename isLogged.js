@@ -1,6 +1,6 @@
 
 
-export default function () {
+function isLogged () {
     if (localStorage.getItem("userName") && localStorage.getItem("username") !== "") {
         window.location.href = "feed.html"
     } else {

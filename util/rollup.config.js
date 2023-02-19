@@ -3,7 +3,6 @@ import livereload from "rollup-plugin-livereload";
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
-import json from '@rollup/plugin-json';
 
 export default {
     input: "./main.js",
@@ -14,7 +13,6 @@ export default {
         name: 'bundle'
     },
     plugins: [
-        json(),
         nodeResolve({
             extensions: [".js"],
         }),

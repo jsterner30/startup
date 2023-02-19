@@ -1,6 +1,6 @@
 
 
-export default function () {
+function newPost () {
     const titleEl = document.querySelector("#newPostTitle")
     const bodyEl = document.querySelector("#newPostBody")
     let posts = localStorage.getItem("posts")
