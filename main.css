@@ -46,8 +46,17 @@ label {
     text-align: center;
     border: none;
     border-radius: 3px;
-    color: #FFFFFF;
-    box-shadow: 0 4px rgba(0, 0, 0, 0.25);
+    background-color: rgb(210, 45, 80);
+    padding-inline: 10%;
+}
+
+.btn-secondary {
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(45, 210, 175);
 }
 
 .btn-large {
@@ -56,8 +65,8 @@ label {
 }
 
 .starter-template {
-    padding: 40px 15px;
     text-align: center;
+    padding-inline: 10%;
 }
 
 p {
@@ -76,6 +85,11 @@ p {
 }
 .author {
     color: #1d1d1d;
+    font-size: 1.25em;
+}
+.date {
+    color: #1d1d1d;
+    font-size: 1.25em;
 }
 .upvote-btn {
     background-color: #2dd2af;
