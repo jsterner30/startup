@@ -1,13 +1,12 @@
 
 
-function feed () {
-    let posts = localStorage.getItem("posts")
-    if (!posts) {
-        localStorage.setItem("posts", "{}")
-        posts = "{}"
-    }
-    const postsObj = JSON.parse(posts)
-    let postsArr = Object.values(postsObj)
+async function feed () {
+    let postsArr = await fetch('/api/posts', {
+        method: 'GET',
+        headers: { 'content-type': 'application/json' },
+    })
+    postsArr = await postsArr.json()
+    console.log(postsArr)
     if (postsArr.length === 0) {
         const noPostsEl = document.createElement("h3")
         noPostsEl.style.color = "white"
@@ -38,26 +37,35 @@ function feed () {
         const upvoteIEl = document.createElement("i")
         upvoteIEl.classList.add("fa-solid", "fa-arrow-up")
         upvoteEl.appendChild(upvoteIEl)
-        upvoteEl.onclick = () => {
+        upvoteEl.onclick = async () => {
             if (post.upvotes[localStorage.getItem("userName")]) {
                 delete post.upvotes[localStorage.getItem("userName")]
-                postsObj[post.postId] = post
-                localStorage.setItem("posts", JSON.stringify(postsObj))
+                await fetch('/api/post', {
+                    method: 'PUT',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(post),
+                })
                 upVoteCountEl.textContent = Object.keys(post.upvotes).length
                 upvoteEl.style.color = "white"
             } else if (post.downvotes[localStorage.getItem("userName")]) {
                 delete post.downvotes[localStorage.getItem("userName")]
                 post.upvotes[localStorage.getItem("userName")] = true
-                postsObj[post.postId] = post
-                localStorage.setItem("posts", JSON.stringify(postsObj))
+                await fetch('/api/post', {
+                    method: 'PUT',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(post),
+                })
                 upVoteCountEl.textContent = Object.keys(post.upvotes).length
                 downVoteCountEl.textContent = Object.keys(post.downvotes).length
                 downvoteEl.style.color = "white"
                 upvoteEl.style.color = "black"
             } else {
                 post.upvotes[localStorage.getItem("userName")] = true
-                postsObj[post.postId] = post
-                localStorage.setItem("posts", JSON.stringify(postsObj))
+                await fetch('/api/post', {
+                    method: 'PUT',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(post),
+                })
                 upVoteCountEl.textContent = Object.keys(post.upvotes).length
                 upvoteEl.style.color = "black"
             }
@@ -71,26 +79,35 @@ function feed () {
         const downvoteIEl = document.createElement("i")
         downvoteIEl.classList.add("fa-solid", "fa-arrow-down")
         downvoteEl.appendChild(downvoteIEl)
-        downvoteEl.onclick = () => {
+        downvoteEl.onclick = async () => {
             if (post.downvotes[localStorage.getItem("userName")]) {
                 delete post.downvotes[localStorage.getItem("userName")]
-                postsObj[post.postId] = post
-                localStorage.setItem("posts", JSON.stringify(postsObj))
+                await fetch('/api/post', {
+                    method: 'PUT',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(post),
+                })
                 downVoteCountEl.textContent = Object.keys(post.downvotes).length
                 downvoteEl.style.color = "white"
             } else if (post.upvotes[localStorage.getItem("userName")]) {
                 delete post.upvotes[localStorage.getItem("userName")]
                 post.downvotes[localStorage.getItem("userName")] = true
-                postsObj[post.postId] = post
-                localStorage.setItem("posts", JSON.stringify(postsObj))
+                await fetch('/api/post', {
+                    method: 'PUT',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(post),
+                })
                 downVoteCountEl.textContent = Object.keys(post.downvotes).length
                 upVoteCountEl.textContent = Object.keys(post.upvotes).length
                 downvoteEl.style.color = "black"
                 upvoteEl.style.color = "white"
             } else {
                 post.downvotes[localStorage.getItem("userName")] = true
-                postsObj[post.postId] = post
-                localStorage.setItem("posts", JSON.stringify(postsObj))
+                await fetch('/api/post', {
+                    method: 'PUT',
+                    headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify(post),
+                })
                 downVoteCountEl.textContent = Object.keys(post.downvotes).length
                 downvoteEl.style.color = "black"
             }
