@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const DB = require('./database.js');
 const cors = require('cors');
-
+const { PeerProxy } = require('./peerProxy.js');
 
 const authCookieName = 'token';
 
@@ -152,12 +152,15 @@ try {
         });
     }
 
-    app.listen(port, () => {
+    const httpService = app.listen(port, () => {
         log(`Listening on port ${port}`);
     });
+    new PeerProxy(httpService);
 } catch (err) {
     log(err);
 }
+
+
 var fs = require('fs');
 var util = require('util');
 var log_file = fs.createWriteStream(__dirname + '/debug.log', {flags : 'w'});
