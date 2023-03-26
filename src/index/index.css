@@ -1,0 +1,42 @@
+#body {
+    background-color: #222222;
+    height: 100%;
+    margin: 100px;
+    padding: 100%;
+}
+
+#login {
+    padding-inline: 10%;
+}
+
+#register {
+    padding-inline: 10%;
+}
+
+div {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#regButton {
+    padding: 0;
+    margin-top: 1%;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+}
+
+#loginDiv {
+    padding: 0%;
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 6rem;
+}
