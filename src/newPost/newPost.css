@@ -1,0 +1,50 @@
+div {
+    text-align: center;
+}
+
+#loginWarning {
+    color: red;
+    font-size: 30px;
+}
+
+#newPostTitle {
+    width: 75%;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+#titleDiv {
+    padding-top: 5%;
+    height: 45%;
+    padding-bottom: 2%
+}
+
+.bodyDiv{
+    text-align: center;
+    padding-bottom: 2%;
+    background-color: #3c3c3c;
+}
+
+textarea {
+    width: 75%;
+    height: 400px;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#top {
+    padding-top: 5%;
+    background-color: #3c3c3c;
+
+}
+
+#submit {
+    width: 25%;
+    height: 50px;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: rgb(210, 45, 80);
+    outline-color: rgb(210, 45, 80);
+}

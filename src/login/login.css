@@ -1,0 +1,35 @@
+#loginBody {
+    background-color: #3c3c3c;
+    margin-top: 5%;
+    padding: 0;
+}
+
+div {
+    text-align: center;
+}
+
+#htmlFor {
+    padding-bottom: 5px;
+}
+
+#password {
+    padding-bottom: 5px;
+}
+
+#buttons {
+    padding-bottom: 5px;
+}
+
+#registerLoginButtonDiv {
+    padding-inline: 10%;
+}
+#registerLoginButtonDiv {
+    padding: 2%;
+}
+#loginWarning {
+    color: red;
+    font-size: 30px;
+}
+#buttons {
+    margin-top: 2%;
+}
