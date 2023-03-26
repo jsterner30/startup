@@ -1,0 +1,19 @@
+div {
+    text-align: center;
+}
+
+p {
+    color: rgb(255, 255, 255);
+}
+
+#cat-container {
+    margin-top: 2%;
+}
+
+button {
+    padding-inline: 10%;
+}
+
+#bodyAbout {
+    padding: 5%;
+}
